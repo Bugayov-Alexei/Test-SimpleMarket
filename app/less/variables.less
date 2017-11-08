@@ -1,0 +1,258 @@
+/*=== Fonts ===*/
+@import url('https://fonts.googleapis.com/css?family=Lato:400,500,600,700,900');
+
+
+/*=== Colors ===*/
+@black: #000000;
+@black_font: #333333;
+@silver: #999999;
+@silver_border: #ebedee;
+@silver_border_input: #bdc3c7;
+@white: #ffffff;
+@orange: #ff3801;
+@green: #89c238;
+@green_shadow: #85bc0f;
+
+
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	color: @black_font;
+}
+
+.clearfix{
+	clear: both;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+	li{
+		list-style: none;
+		display: inline-block;
+		a{
+			display: block;
+			color: @black_font;
+			transition: all 0.5s ease;
+			span{
+				transition: all 0.5s ease;
+			}
+			&:hover, &:focus{
+				text-decoration: none;
+				color: @black_font;
+			}
+		}
+	}
+}
+
+/*===== Class color =====*/
+.distinguish{
+	color: @orange;
+}
+
+/*===== Button call back=====*/
+.call_back{
+	position: relative;
+	width: 150px;
+	height: 35px;
+	line-height: 35px;
+	background-color: @green;
+	border: none;
+	border-radius: 2px;
+	color: @white;
+	outline: none;
+	transition: all 0.5s ease;
+	&:after{
+		position: absolute;
+		content: 'Обратный звонок';
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+}
+
+/*===== Class active =====*/
+.active{
+	color: @white;
+	background-color: @orange;
+}
+
+/*===== Socila links =====*/
+.social_links{
+	text-align: center;
+	li{
+		margin: 0 5px;
+		a{
+			display: block;
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			text-align: center;
+			border-radius: 50%;
+			color: @white;
+			font-size: 12px;
+			&:hover{
+				color: @white;
+			}
+		}
+	}
+}
+
+.facebook{
+	background-color: #415da6;
+}
+.vk{
+	background-color: #6084a8;
+}
+.google{
+	background-color: #db4d3f;
+}
+
+#description{
+	overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.all_text{
+	display: block;
+	color: @orange;
+	text-decoration: underline;
+	outline: none;
+	background: none;
+	border: none;
+	&:focus, &:hover{
+		color: @orange;
+	}
+}
+
+#menu_mobile{
+  width: 320px;
+  height: 100vh;
+  z-index: 9;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;  
+  border: 1px solid #ebedee;;
+  position: absolute;
+  top: 59px;
+	background-color: #fff;
+  li{
+  	font-size: 16px;
+  	width: 100%;
+		background-color: #fff;
+  	a{
+		  text-decoration: none;
+		  display: block;
+		  padding: 5px 15px;
+		  border-bottom: 1px solid #ebedee;
+		  color: #000;
+		  &:hover{
+		  	background-color: #ff3801;
+	  		color: #fff; 
+		  }
+		}
+  }
+  
+}
+
+/*=== Modal window ===*/
+.overflow {
+	width: 100%; 
+	height: 100vh; 
+	z-index: 9998; 
+	background: rgba(0,0,0,0.7); 
+	position: absolute; 
+	top: 0;
+}
+.modal_window{
+	position: absolute;
+	width: 300px;
+	height: 400px;
+	left: 50%;
+	top: -100%;
+	margin-left: -150px;
+	padding: 35px 15px;
+	text-align: center;
+	background-color: @orange;
+	color: @white;
+	box-shadow: 0 5px 10px @black_font;
+	z-index: 9999;
+	transition: all 0.5s ease;
+	&:after{
+		position: absolute;
+		content: '';
+		width: 50px;
+		height: 50px;
+		top: -25px;
+		left: 125px;
+		background: url(../assets/img/Panama_form.jpg) center center ;
+		background-size: cover;
+		border-radius: 50%;
+		border: 2px  solid @orange;
+	}
+	p{
+		position: relative;
+		margin-bottom: 20px;
+		label{
+			position: absolute;
+			top: 2px;
+			left: 7px;
+			color: @orange;
+			font-size: 22px;
+		}
+	}
+	input, textarea{
+  	outline: none;
+		width: 100%;
+		padding: 8px 15px 8px 35px;
+		border: none;
+		color: #000;
+	}	
+}
+
+/*=== Jquery slider (plagin "Bxslider") ===*/
+.bx-controls-direction{
+	display: none;
+}
+.bx-wrapper .bx-pager.bx-default-pager .bx-pager-item{
+	.active{background: none;}
+	&:nth-child(1){
+		background: url(../assets/img/house_2.jpg) no-repeat center center;
+		width: 60px;
+		height: 60px;
+		margin: 10px 0;
+	}
+	&:nth-child(2){
+		background: url(../assets/img/house_3.jpg) no-repeat center center;
+		width: 60px;
+		height: 60px;
+		margin: 10px 0;
+	}
+	&:nth-child(3){
+		background: url(../assets/img/house_4.jpg) no-repeat center center;
+		width: 60px;
+		height: 60px;
+		margin: 10px 0;
+	}
+	&:nth-child(4){
+		background: url(../assets/img/house_5.jpg) no-repeat center center;
+		width: 60px;
+		height: 60px;
+		margin: 10px 0;
+	}
+	&:nth-child(5){
+		background: url(../assets/img/house_6.jpg) no-repeat center center;
+		width: 60px;
+		height: 60px;
+		margin: 10px 0;
+	}
+	
+}

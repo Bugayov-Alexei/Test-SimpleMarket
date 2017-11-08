@@ -1,0 +1,360 @@
+@import "variables.less";
+ /*===== Top menu =====*/
+#top_menu{ 
+	height: 42px;
+	position: relative;
+	border-top: 1px solid @silver_border;
+	border-bottom: 1px solid @silver_border;
+	.menu{
+		a{
+			padding: 10px;
+			transition: all 0.5s ease;
+			border-bottom: 1px solid @silver_border;
+			&:hover{
+				border-bottom: 1px solid @orange;
+				color: @orange;
+			}
+		}
+	}
+	.menu_enter{
+		position: absolute;
+		height: 41px;
+		line-height: 39px;
+		li{
+			margin:0 -4px 0 0;
+			a{
+				padding: 0 9px;
+				height: 41px;
+				display: block;
+				border-left: 1px solid @silver_border;	
+				border-right: 1px solid @silver_border;
+				span{
+					margin-right: 8px;
+					color: @orange;
+				}
+				&:hover{
+					color: @white;
+					background-color: @orange;
+					span{
+						color: @white;
+					}
+				}
+				.count{
+					display: inline-block;
+					margin-left: 5px;
+
+				}
+			}
+		}
+	}
+}
+
+/*Header for tablet*/
+#tablet_header{
+	margin-bottom: 10px;
+	.top{
+		height: 44px;
+		line-height: 43px;
+		border-bottom: 1px solid @silver_border;
+		.menu a{
+			padding: 0 10px;
+			transition: all 0.5s ease;
+			border-bottom: 1px solid @silver_border;
+			&:hover{
+				border-bottom: 1px solid @orange;
+				color: @orange;
+			}
+		}
+		.btn_number{
+			position: relative;
+			.number{
+				margin-right: 180px;
+				font-size: 18px;
+				font-weight: 600;
+			}
+			.call_back{
+				width: 174px;
+				height: 43px;
+				position: absolute;
+				top: 0px;
+				right: -15px;
+				border-radius: 0px;
+				border-bottom: 1px solid @green;
+				&:after{
+					top: 0;
+				}
+			}
+		}
+	}
+
+	.menu_search_logo{
+		position: relative;
+		height: 60px;
+		line-height: 60px;
+		font-size: 24px;
+		border-bottom: 1px solid @silver_border;
+		.left_block, .right_block{
+			a{
+				margin: 0 -4px 0 -1px;
+				width: 60px;
+				height: 60px;
+				text-align: center;
+				border-right: 1px solid @silver_border;
+				border-left: 1px solid @silver_border;
+				color: @orange;
+				&:focus{
+					color: @black;
+				}
+			}
+		}
+		.left_block{
+			margin-left: -15px;
+
+		}
+		.right_block{margin-right: -15px;}
+		.logo img{
+			width: 170px;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+/*===== Header =====*/
+#header_large{
+	display: block;
+	/*==== Block of information and search ====*/
+	.info_and_search{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		height: 130px;
+		padding: 15px 0;
+	
+		/*===Vertical alignment ===*/
+		.logo, .search, .telefon_number{
+    	margin: auto;
+		}
+
+		/*=== Left telefon number and call back===*/
+		.telefon_number{
+			p{
+				font-size: 18px;
+				font-weight: 600;
+			}
+		}
+
+		/*=== Right search ===*/
+		.search{
+			.search_line{
+				position: relative;
+				input{
+					padding: 5px 30px;
+					border-radius: 25px;
+					border: 1px solid @silver_border_input;
+					outline: none;
+				}
+				span{
+					position: absolute;
+					top: 5px;
+					right: 188px;
+					color: @silver;
+				}
+			}			
+		}
+	}
+
+	/*==== Menu of products ====*/
+	.menu_of_products{
+		
+		.menu{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			border-top: 1px solid @silver_border;
+			border-bottom: 1px solid @silver_border;
+			li{		
+				flex-grow: 1;
+				margin: 0;
+				a{
+					display: block;
+					padding: 15px 0;
+					&:hover, &:focus{
+						color: @white;
+						background-color: @orange;
+						span{
+							color: @white;
+						}
+					}
+
+				}
+			}
+		}
+	}
+}
+
+/*===== Brad crumbs =====*/
+#navigation{
+	padding: 15px 0;
+	.breadcrumb{
+		margin: 0;
+		background-color: @white;
+		li{
+			a{
+				color: @black_font;
+				&:hover, &:focus{
+					text-decoration: none;
+					color: @black_font;
+				}
+			}
+			&:before{
+				content: '>';
+				color: @black_font;
+			}
+			&:first-child{
+				&:before{
+					content: none;
+				}
+			}
+		}
+	}
+}
+
+
+/*===== Blcok product =====*/
+#product{
+	margin-bottom: 100px;
+
+	/*==== Block img ====*/
+	.block_img{
+		overflow: hidden;
+		width: 100%;
+		height: 440px;
+	}
+
+	/*==== Block information ====*/
+	.block_info{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		overflow: hidden;
+		/*=== Vertical align ===*/
+		.left, .right{margin: auto;}
+		/*=== Left part ===*/
+		.info{
+			margin: auto;
+			h3{
+				font-size: 20px;
+			}
+			/*=== Price and rewiews ===*/
+			.price_and_rewiews{
+
+				.left_price{
+					float: left;
+					position: relative;
+					p{
+						margin: 0;
+						&:first-child{
+							font-size: 24px;
+							font-weight: 600;
+							span{
+								font-size: 18px;
+								font-weight: 400;
+							}
+						}
+						&:last-child{
+							text-decoration:line-through;
+							color: @silver;
+						}
+					}
+				}
+				.right_rewiews{
+					float: right;
+					.stars{
+						margin: 5px 0;
+						li{
+							margin-right: 3px;
+							a{
+								color: @orange;
+							}
+						}
+					}
+					a{
+						color: #000;
+						text-decoration: underline;
+					}
+				}
+			}
+
+			/*=== Block proportions ===*/
+			.proportions{
+				margin: 10px 0;
+				p{
+					margin-bottom: 10px;
+				}
+				ul li{
+					width: 40px;
+					height: 40px;
+					line-height: 40px;
+					text-align: center;
+					border: 1px solid @silver;
+					margin: 1px 1px 0 0;
+					font-weight: 600;
+					cursor: pointer;
+					transition: all 0.5s ease;
+					&.active, &:hover{
+						background-color: transparent;
+						color: #000;
+						border: 1px solid @orange;
+					}
+				}
+			}
+			
+			/*=== Buy button and product id ===*/
+			.buy_and_id{
+				margin: 15px 0;
+				.left_buy{
+					float: left;
+					p{
+						font-size: 13px;
+					}
+					.buy{
+						margin: 5px 0;
+						padding: 10px 40px;
+						background-color: @orange;
+						border: none;
+						color: @white;
+						text-transform: uppercase;
+						font-weight: 600;
+						letter-spacing: 1px;
+						outline: none;	
+					}
+				}
+				.right_delivery{
+					float: right;
+					p{
+						margin: 0;
+					}
+					a{
+						font-size: 13px;
+						color: #000;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		/*=== Right part ===*/
+	}
+	
+	/*==== Product description ====*/
+	.about_product{
+		font-family: sans-serif;
+	}
+}
+
+@import "media.less";
